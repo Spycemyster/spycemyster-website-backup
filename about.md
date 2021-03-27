@@ -4,12 +4,4 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
-
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
-
-### Contact me
-
-[email@domain.com](mailto:email@domain.com)
+My name is Spencer and I am a sophomore Computer Science (Games) student studying at the University of Southern California. I develop games in my free time and will post some of the cool stuff I make on this website.

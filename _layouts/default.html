@@ -27,8 +27,11 @@
           </div>
 
           <nav>
-            <a href="{{ site.baseurl }}/blog">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
+            {% for item in site.data.navigations %}
+            <a href="{{ site.baseurl }}/{{ item.link }}">{{ item.name }}</a>
+            {% endfor %}
+            <!-- <a href="{{ site.baseurl }}/blog">Blog</a>
+            <a href="{{ site.baseurl }}/about">About</a> -->
           </nav>
         </header>
       </div>

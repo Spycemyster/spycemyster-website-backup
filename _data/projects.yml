@@ -1,0 +1,6 @@
+- name: SpyceLibrary (WIP)
+  link: spycelibrary
+  desc: SpyceLibrary is a library for the Monogame framework. It follows the similar design patterns of the Unity Game Engine by implementing a component based game objects style of game development, rather than an object inheritance based system. It will also utilize a scene-based system for managing independent game states. The main purpose of this library is to increase productivity of games through the Monogame framework. This page will serve as the planning page for development of the library.
+- name: Placeholder
+  link: placeholder
+  desc: Placeholder project for a future project
