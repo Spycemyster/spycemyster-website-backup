@@ -60,7 +60,7 @@ title:  SpyceLibrary (WIP)
 -   bool isEnabled
 
 ### Member Methods
--   T GetComponent<pre><T></pre>()
+-   T GetComponent\<T\>()
     -   Searches for a component of the given type
 -   void Invoke(Function, float)
     -   Calls the function after a given amount of time has passed
@@ -82,9 +82,9 @@ title:  SpyceLibrary (WIP)
 ### Static Methods
 -   void Destroy(GameObject)
     -   Removes the game object from the scene
--   void QueueDraw(GameObject, bool cameraEnabled)
+-   void DrawObject(GameObject, bool cameraEnabled)
     -   Queues the game object to be drawn
--   void QueueDraw(GameObject, uint drawOrder, bool cameraEnabled)
+-   void DrawObject(GameObject, uint drawOrder, bool cameraEnabled)
     -   Queues the game object to be drawn in a given draw order
 
 ##  GameScene
@@ -93,31 +93,80 @@ title:  SpyceLibrary (WIP)
     -   The associated of the game scene. This is used to map between different scenes. Multiple scenes cannot have the same name.
 -   GameObject root
     -   The root game object. All game objects are childed to this game object.
--   Queue<pre><DrawCall></pre>[] draws;
 
 ### Member Methods
-### Static Methods
+-   void AddObject(GameObject)
+    -   Adds an object to the scene.
+-   bool RemoveObject(GameObject)
+    -   Removes an object from the scene.
+-   void Draw(SpriteBatch)
+    -   Draws each item in the draw.
+-   void Update(GameTime)
+    -   Updates the game objects to the scene
+-   void Initialize(Initializer)
+    -   Initializes the game scene
 
+### Static Methods
+-   void Destroy(GameObject)
+    -   Destroys and removes the game object from the scene
+-   void ChangeScene(string)
+    -   Transitions this scene to the given one
+-   void LoadScene(string)
+    -   Creates and initializes a new instance of the given scene (but does not transition it)
+
+#   Structs
 ##  Transform
 ### Fields
-### Member Methods
-### Static Methods
+-   Vector2 Position
+-   Vector2 Scale
+-   float Rotation
 
 ##  Initializer
 ### Fields
-### Member Methods
-### Static Methods
+-   ContentManager Content
+-   GraphicsDevice Graphics
+-   SpriteBatch SpriteBatch
 
 #   Singletons
 
 ##  SceneManager (Singleton)
 ### Fields
+-   Map\<string, GameScene\> scenes
+    -   A map of different game scenes. This allows for smooth and simple transitions between different scenes.
+-   GameScene current
+    -   The current scene of the game
+
 ### Member Methods
-### Static Methods
+-   void Update(GameTime)
+    -   Updates the current scene
+-   void Draw(SpriteBatch)
+    -   Draws the current scene
+-   void Initialize(ContentManager, GraphicsDevice, SpriteBatch)
+    -   Performs first time initialization on the scene manager
+-   void ChangeScene(string)
+    -   Changes the scene to the given one (if it exists)
+-   GameScene LoadScene(string)
+    -   Creates a new instance of the scene and returns it
 
 ##  InputManager (Singleton)
-### Fields
 ### Member Methods
+-   void Update()
+    -   Updates the input states of this input manager instance.
+-   bool isMouseDown(MouseButton[])
+    -   Determines whether all the given mouse buttons are currently being pressed.
+-   bool isMouseUp(MouseButton[])
+    -   Determines whether all the given mouse buttons are not currently being pressed.
+-   bool isMouseClicked(MouseButton)
+    -   Determines whether all the given mouse button is clicked.
+-   bool isKeyDown(Keys[])
+    -   Determines whether all the given key buttons are currently being pressed.
+-   bool isKeyUp(Keys[])
+    -   Determines whether all the given key buttons are currently not being pressed.
+-   bool isKeyPressed(Keys)
+    - Determines whether the key is pressed
+-   int mouseScrolled()
+    -   Determines the amount the mouse wheel is scrolled.
+
 ### Static Methods
 
 ##  Debug (Singleton)
