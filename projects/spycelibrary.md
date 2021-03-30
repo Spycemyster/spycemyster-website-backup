@@ -4,7 +4,7 @@ title:  SpyceLibrary (WIP)
 ---
 
 #   SpyceLibrary
-*SpyceLibrary* is a library for the [*Monogame*](https://www.monogame.net/ "Truly the stuff of magic...") framework. It follows the similar design patterns of the *Unity Game Engine* by implementing a component based game objects style of game development, rather than an object inheritance based system. It will also utilize a scene-based system for managing independent game states. The main purpose of this library is to increase productivity of games through the [*Monogame*](https://www.monogame.net/ "Truly the stuff of magic...") framework. This page will serve as the planning page for development of the library.
+*SpyceLibrary* is a library for the [*Monogame*](https://www.monogame.net/ "Truly the stuff of magic...") framework. It follows the similar design patterns of the *Unity Game Engine* by implementing a component based game objects style of game development, rather than an object inheritance based system. It will also utilize a scene-based system for managing independent game states. The main purpose of this library is to increase productivity of games through the [*Monogame*](https://www.monogame.net/ "Truly the stuff of magic...") framework. This page will serve as the planning page for development of the library. Stay tuned for the implementation!
 
 #  Base Classes
 ## GameObject
@@ -166,27 +166,111 @@ title:  SpyceLibrary (WIP)
     - Determines whether the key is pressed
 -   int mouseScrolled()
     -   Determines the amount the mouse wheel is scrolled.
-
-### Static Methods
-
 ##  Debug (Singleton)
-### Fields
 ### Member Methods
-### Static Methods
+-   void DrawLine(Vector2 start, Vector2 end, bool cameraEnabled);
+    -   Draws a line between the two given points. If camera is enabled, then it will draw based on the current camera. If not, it will draw it relative to the screen.
+-   void DrawRectangle(Rectangle rect, float opacity, float rotation, Color color, bool cameraEnabled)
+    -   Draws a rectangle to the screen. If camera is enabled, then it will draw based on the current camera. If not, it will draw it relative to the screen.
+-   void Log(string source, string line)
+    -   Prints out the contents of the line in a formatted manner
+-   void SaveLog(string dest);
+    -   Saves the contents of the log to the given file destination
+-   void TakeScreenshot(string dest)
+    -    Saves the contents of the screen and saves it to the destination
 
 # Components
 
 ##  Camera
 ### Fields
+-   Vector2 position
+    -   The position of the camera relative to the game world
+-   float zoom
+    -   The multiplier zoom of the camera view
+-   float rotation
+    -   Rotation (in radians) of the camera relative to the game world
 ### Member Methods
-### Static Methods
-
+-   Vector2 GetPosition()
+    -   Gets the position of the camera
+-   Matrix GetTransformation()
+    -   Generates a transformation matrix for the camera
+-   void LookAt(Vector2)
+    -   Sets the position of the camera
+-   void Reset()
+    -   Resets all the properties of the camera.
+-   void Rotate(float angle)
+    -   Rotates the camera's viewport by the given angle
+-   void SetRotation(float angle)
+    -   Sets the camera rotation to the given angle
+-   void Zoom(float zoom)
+    -   Sets the zoom of the camera
 ##  TextureSprite
 ### Fields
-### Member Methods
-### Static Methods
+-   float width
+-   float height
+-   Vector2 origin
+-   Vector2 scale
 
+### Member Methods
+-   Rectangle GetDrawRectangle(Vector2)
+    -   Gets the draw rectangle based on the texture sprite's properties and the given position
+
+# Physics System
+## Collider
+The abstract collider object represents a system of checking for collision among different objects
+### Fields
+-   float x, y
+### Member Methods
+-   bool collidesWith(Collider);
+    -   Checks if the given collider is currently colliding with this one.
+### Static Methods
 ##  PhysicsBody
 ### Fields
+-   List\<Collider\> colliders;
 ### Member Methods
-### Static Methods
+-   void Update(float);
+    -   Updates the position and forces on this physics body
+-   void AddBody(PhysicsBody body)
+    -   Registers a physics body with the engine. Adds it to a list of bodies that are updated
+-   void DeleteBody(PhysicsBody body)
+    -   Unregisters a physics body with the engine.
+
+# Lighting System
+## LightEngine
+### Fields
+-   float MaxBrightness
+-   float MinBrightness
+-   uint DayTimeSeconds
+-   int LightResolution
+-   List\<LightSource\> lightSources
+
+### Constructor
+-   LightEngine(GraphicsDevice, Effect lightEffect, float maxBrightness, float minBrightness, uint dayTimeSeconds = 86400, int lightResolution = 1000)
+### Destructor
+-   ~LightEngine 
+    -   Frees up the generated resources.
+### Member Methods
+-   void Load(Initializer)
+    -   Generates the light mask and loads other effects
+-   void AddSource(LightSource)
+    -   Registers a new light source with the engine
+-   bool DeleteSource(LightSource source)
+    -   Unregisters an existing light source and returns whether it was successful.
+-   void Update(float)
+    -   Updates the real time behaviors of the world time
+-   void Draw(SpriteBatch, Camera)
+    -   Renders the light sources to the screen
+
+## LightSource
+A source of light that registers with the light engine
+### Constructor
+-   LightSource(float intensity, float radius, float xOffset, float yOffset)
+
+# User Interface
+##  UIComponent
+### Fields
+-   int x, int y
+-   delegate void UIEvent()
+
+### Constructor
+-   UIComponent(int x, int y)
