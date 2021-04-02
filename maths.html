@@ -1,0 +1,16 @@
+---
+layout: default
+title:  Math Stuff
+---
+
+<h1>Math Stuff</h1>
+
+<ul>
+    
+    {% for item in site.data.maths %}
+    <li>
+        <h2><a href="{{ site.baseurl }}/math/{{ item.link }}/">{{ item.name }}</a></h2>
+        {{ item.desc }}
+    </li>
+    {% endfor %}
+</ul>

@@ -267,6 +267,7 @@ A source of light that registers with the light engine
 -   LightSource(float intensity, float radius, float xOffset, float yOffset)
 
 # User Interface
+This will be a simple implementation of a user interface system. Various components can be drawn onto a 
 ##  UIComponent
 ### Fields
 -   int x, int y
