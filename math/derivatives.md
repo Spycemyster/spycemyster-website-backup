@@ -28,7 +28,8 @@ $$ \frac{dy}{dx}[f(x) - g(x)] = f'(x) - g'(x)$$
 This one should be straightforward if you got the first two.
 
 # Table of Derivatives
-
+<details>
+<summary>Click to View List of Common Derivatives</summary>
 $$ \frac{dy}{dx}[c]=0 $$
 
 $$ \frac{dy}{dx}[x^n]=nx^{n-1} $$
@@ -62,6 +63,7 @@ $$ \frac{dy}{dx}[sec^{-1}(x)]=\frac{-1}{|x|\sqrt(x^2-1)} $$
 $$ \frac{dy}{dx}[cot^{-1}(x)]=\frac{-1}{1+x^2} $$
 
 Most of the derivatives that you will run into can just be a composition of these derivatives and a composition of various derivative rules.
+</details>
 
 # Derivative Rules
 It does.
@@ -103,7 +105,8 @@ Remember that taking the derivative of a function is just a mathematical operati
 Calculate the derivative of $$y=ln(x)$$ through implicit differentiation (Don't just lookup the derivative of ln(x)!)
 
 #### Solution
-
+<details>
+<summary>Click to View Volution</summary>
 $$e^y=e^{ln(x)}$$ (Raise both sides to the e power to cancel out the logarithm)
 
 $$e^y=x$$ (These two functions look easy to differentiate)
@@ -117,11 +120,14 @@ $$\frac{dy}{dx}=\frac{1}{e^y}$$ (Divide both sides by $$e^y$$)
 $$\frac{dy}{dx}=\frac{1}{x}$$ (Remember from the second step, $$e^y=x$$)
 
 We're done! The derivative of $$ln(x)$$ is $$\frac{1}{x}$$
+</details>
 
 #### Problem 2
 Calculate the $$\frac{dy}{dx}$$ from the following equation $$x^2+y^2=1$$
 
 #### Solution
+<details>
+<summary>Click To View Solution</summary>
 You might recognize that this is the equation for a circle with radius 1. (Think later about what the derivative means for this after we finish!)
 
 $$\frac{d}{dx}[x^2+y^2=1]$$ (Implicit differentiation)
@@ -136,3 +142,4 @@ $$\frac{dy}{dx}=-\frac{x}{y}$$ (Simplify)
 
 And we're done! The derivative of y is $$-\frac{x}{y}$$. What does this mean through? This means that the rate of change for a circle is dependent on both the x position and y position of the point.
 
+</details>

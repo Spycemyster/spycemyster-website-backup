@@ -216,6 +216,24 @@ title:  SpyceLibrary (WIP)
     -   Gets the draw rectangle based on the texture sprite's properties and the given position
 
 # Physics System
+## PhysicsManager
+This object handles all the physics interactions between various objects currently in the game world.
+
+### Fields
+-   List\<PhysicsBody\> bodies
+    -   The list of bodies to be updated
+-   Vector2 GravityDirection
+    -   The direction of gravity
+
+##  Member Methods
+-   void Update(float)
+    -   Updates each physics body
+-   void AddBody(PhysicsBody body)
+    -   Registers a physics body with the engine. Adds it to a list of bodies that are updated
+-   void DeleteBody(PhysicsBody body)
+    -   Unregisters a physics body with the engine.
+
+### Member Methods
 ## Collider
 The abstract collider object represents a system of checking for collision among different objects
 ### Fields
@@ -230,10 +248,6 @@ The abstract collider object represents a system of checking for collision among
 ### Member Methods
 -   void Update(float);
     -   Updates the position and forces on this physics body
--   void AddBody(PhysicsBody body)
-    -   Registers a physics body with the engine. Adds it to a list of bodies that are updated
--   void DeleteBody(PhysicsBody body)
-    -   Unregisters a physics body with the engine.
 
 # Lighting System
 ## LightEngine
@@ -265,6 +279,14 @@ The abstract collider object represents a system of checking for collision among
 A source of light that registers with the light engine
 ### Constructor
 -   LightSource(float intensity, float radius, float xOffset, float yOffset)
+
+# Sound Engine
+
+## SoundManager
+-   void PlaySound(Sound, float)
+    -   Plays the sound at the given volume
+-   void PlaySound(Sound, float, Vector2 position)
+    -   Plays the sound at the given volume and position
 
 # User Interface
 This will be a simple implementation of a user interface system. Various components can be drawn onto a 
