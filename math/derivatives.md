@@ -2,6 +2,10 @@
 layout: default
 title:  Derivatives
 ---
+<div class="date">
+Written On: April 2, 2021<br>
+Last Updated: April 8, 2021
+</div>
 ### Notes
 -   $$\frac{dy}{dx}[f(x)]=f'(x)=(f(x))'=f' \to $$ Common notation for "Derivative of *f*"
 -   Differentiability **implies** continuity
