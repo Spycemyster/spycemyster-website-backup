@@ -114,7 +114,7 @@ class Game {
     // Stage 1 - Free Time
     // The player will have (1.5) seconds of free time when after they are greeted from the introduction
     updateStage1(dt) {
-        if (this.#gameTimer > 1500) {
+        if (this.#gameTimer > 1250) {
             this.#gameTimer = 0;
             console.log(1);
             this.setStage(2);
@@ -129,7 +129,7 @@ class Game {
             this.spawnScreenDroppers(this.#dropperTTL);
         }
 
-        if (this.#gameTimer > 8500) {
+        if (this.#gameTimer > 8000) {
             this.setStage(3);
         }
     }
@@ -147,7 +147,7 @@ class Game {
             }
             this.#initializedStage = true;
         }
-        if (this.#gameTimer > 8000) {
+        if (this.#gameTimer > 10000) {
             this.setStage(4);
         }
     }
@@ -156,7 +156,7 @@ class Game {
     // Summons 9 vortexes, 4 droppers around the screen, and 1 drunk dropper (a dropper that fires bullets
     // in all directions, not really a vortex)
     updateStage4(dt) {
-        if (!this.#initializedStage && this.#gameTimer > 3000) {
+        if (!this.#initializedStage && this.#gameTimer > 3500) {
             for (let i = 0; i < 7; i++) { // vortexes
                 let v = new VortexLauncher((windowWidth - 2 * SPAWN_BORDER) * Math.random() + SPAWN_BORDER,
                     (windowHeight - 2 * SPAWN_BORDER) * Math.random() + SPAWN_BORDER,

@@ -153,7 +153,7 @@ function initializeGame() {
   scoreTimer = 0;
   gameTimer = 0;
   GAME.initialize();
-  player = new Player(GAME_WIDTH / 2, GAME_HEIGHT / 2, 12, 12, 0.4, 10, color(200));
+  player = new Player(GAME_WIDTH / 2, GAME_HEIGHT / 2, 12, 12, 0.3, 10, color(200));
 }
 
 // resets the game
