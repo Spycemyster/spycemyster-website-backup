@@ -4,6 +4,9 @@
 - name: Vortex Dodger
   link: VortexDodger/index.html
   desc: Bullet-Hell genre game.
+- name: Grapher
+  link: Grapher/Grapher.html
+  desc: Graph first order ordinary differential equations.
 - name: Kaufman Touhou
   link: kaufmantouhou
   desc: A bullet-hell game with a fairy tale-like story.
