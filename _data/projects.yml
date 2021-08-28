@@ -5,7 +5,7 @@
   link: VortexDodger/index.html
   desc: Bullet-Hell genre game.
 - name: Grapher
-  link: Grapher/Grapher.html
+  link: grapher
   desc: Graph first order ordinary differential equations.
 - name: Kaufman Touhou
   link: kaufmantouhou
