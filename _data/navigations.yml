@@ -4,5 +4,7 @@
   link: about
 - name: Projects
   link: projects
-- name: Math Help
+- name: Math
   link: maths
+- name: Resume
+  link: download/Resume.pdf
