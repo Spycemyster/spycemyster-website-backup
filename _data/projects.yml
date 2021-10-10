@@ -1,15 +1,20 @@
 - name: P5.JS Projects
   link: p5js
   desc: A portfolio of my p5.js visual projects
+  image: download/icecreamswirl.png
 - name: Vortex Dodger
   link: VortexDodger/index.html
   desc: Bullet-Hell genre game.
+  image: download/VortexDodger_Cover.jpg
 - name: Grapher
   link: grapher
   desc: Graph first order ordinary differential equations.
+  image: download/Grapher_Cover.png
 - name: Kaufman Touhou
   link: kaufmantouhou
   desc: A bullet-hell game with a fairy tale-like story.
+  image: download/KaufmanTouhou_Cover.png
 - name: Diamond in the Water
   link: diamondinthewater
   desc: A strategy planning game that teaches key economic concepts such as opportunity cost and trade. Includes a bonus gamemode that shows different economic model curves.
+  image: download/DiamondInTheWater_Cover.png
