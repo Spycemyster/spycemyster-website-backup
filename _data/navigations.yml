@@ -1,9 +1,7 @@
-- name: Blog
-  link: blog
-- name: About
-  link: about
 - name: Projects
   link: projects
+- name: Tools
+  link: tools
 - name: Math
   link: maths
 - name: Resume

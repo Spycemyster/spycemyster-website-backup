@@ -1,12 +1,8 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: Tools
 ---
 
-My name is Spencer and I am a Junior Computer Science (Games) student studying at the University of Southern California. I develop games in my free time and will post some of the cool stuff I make on this website.
-
-# Tools I Use
 Here's a list of tools that I use during development or project-related stuff.
 ## Editors
 -   [*Visual Studios Code (free)*](https://code.visualstudio.com/ "Download")
