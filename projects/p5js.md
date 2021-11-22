@@ -4,7 +4,7 @@ title: p5.js Portfolio
 ---
 ## [Icecream Swirl](https://preview.p5js.org/spycemyster/present/por-VDZbA "Watch here!")
 
-## [Spinning Stars] (https://preview.p5js.org/spycemyster/present/LHGSB-pRw "Watch here!")
+## [Spinning Stars](https://preview.p5js.org/spycemyster/present/LHGSB-pRw "Watch here!")
 
 ## [Galaxy Generator](https://preview.p5js.org/spycemyster/present/3_eadk0LX3 "Watch here!")
 
