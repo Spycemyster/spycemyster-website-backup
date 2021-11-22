@@ -110,7 +110,7 @@ Calculate the derivative of $$y=ln(x)$$ through implicit differentiation (Don't 
 
 #### Solution
 <details>
-<summary>Click to View Volution</summary>
+<summary>Click to View Solution</summary>
 $$e^y=e^{ln(x)}$$ (Raise both sides to the e power to cancel out the logarithm)
 
 $$e^y=x$$ (These two functions look easy to differentiate)
