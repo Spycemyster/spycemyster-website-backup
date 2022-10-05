@@ -4,7 +4,7 @@ title:  WIP Gacha Game
 ---
 A proof of concept for a server-authoritative game using Godot as front-end and Google Firebase as back-end.
 
-## [Play Game](https://bggamedatabase.web.app/bin/BG.html "Play Game"){:target="_blank"}
+## [Download (recommended)]({{ site.url }}/download/BG.zip "Download Game"){:target="_blank"} |   [Play on Web (not recommended)](https://bggamedatabase.web.app/bin/BG.html "Play Game"){:target="_blank"}
 
 # Screenshots
 ![Login](/download/gachaTitle.png)
