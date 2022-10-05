@@ -10,7 +10,7 @@ title:  Games
     {% for item in site.data.games %}
     <li>
         <h2><a href="{{ site.baseurl }}/games/{{ item.link }}">{{ item.name }}</a></h2>
-        <img src="{{ site.baseurl }}/{{ item.image }}"></img>
+        <img width="600" src="{{ site.baseurl }}/{{ item.image }}"></img>
         <p>{{ item.desc }}</p>
     </li>
     {% endfor %}

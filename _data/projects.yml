@@ -1,7 +1,11 @@
+- name: WIP Gacha Game
+  link: gacha
+  desc: A work-in-progress server-authoritative web game that has gacha mechanics. Backend made in Firebase (Typescript).
+  image: download/gachaTitle.png
 - name: Backrooms
   link: backrooms
   desc: An infinite backrooms maze (Level 0)
-  image: 
+  image: download/backrooms.png
 - name: P5.JS Projects
   link: p5js
   desc: A portfolio of my p5.js visual projects

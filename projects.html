@@ -10,7 +10,7 @@ title:  Projects
     {% for item in site.data.projects %}
     <li>
         <h2><a href="{{ site.baseurl }}/projects/{{ item.link }}">{{ item.name }}</a></h2>
-        <img src="{{ site.baseurl }}/{{ item.image }}"></img>
+        <img width="600" src="{{ site.baseurl }}/{{ item.image }}"></img>
         <p>{{ item.desc }}</p>
     </li>
     {% endfor %}
